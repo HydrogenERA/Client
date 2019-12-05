@@ -4,6 +4,7 @@
 
     <InputContent></InputContent>
     <sharePic :imageId="image"></sharePic>
+    <ImageCard></ImageCard>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import sharePic from "./components/sharePic";
 import HeaderContent from "./components/HeaderContent.vue";
 import InputContent from "./components/InputContent.vue";
+import ImageCard from "./components/ImageCard.vue";
 
 export default {
   name: "App",
   components: {
     sharePic,
     HeaderContent,
-    InputContent
+    InputContent,
+    ImageCard
   },
   data() {
     return {
