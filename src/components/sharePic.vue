@@ -14,7 +14,7 @@ export default {
   name: "sharePic",
   data() {
     return {
-        shareLink:`https://twitter.com/intent/tweet?text=https://imgur.com/gallery/u2QPHwe`
+        shareLink:`https://twitter.com/intent/tweet?text=${imageId}`
     };
   },
   props:['imageId']

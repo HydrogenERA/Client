@@ -1,24 +1,36 @@
 <template>
-<div>
+  <div>
+    <HeaderContent v-bind:header="header" v-bind:contents="contents"></HeaderContent>
+
+    <InputContent></InputContent>
     <sharePic :imageId="image"></sharePic>
-</div>
+  </div>
 </template>
 
 <script>
-import sharePic from './components/sharePic'
+import sharePic from "./components/sharePic";
+import HeaderContent from "./components/HeaderContent.vue";
+import InputContent from "./components/InputContent.vue";
+
 export default {
-  name:'App',
-  components:{
-      sharePic
+  name: "App",
+  components: {
+    sharePic,
+    HeaderContent,
+    InputContent
   },
   data() {
     return {
-      image:''
+      image: "",
+      header: "HydrogenERA",
+      contents: [
+        "Create and share beautiful images of your source code.",
+        "Start typing or drop a file into the text area to get started."
+      ]
     };
-  },
+  }
 };
 </script>
 
 <style scoped>
-    
 </style>
