@@ -1,4 +1,5 @@
 <template>
+  <div>
   <b-field class="file">
     <b-upload v-model="file">
       <a class="button is-primary">
@@ -7,10 +8,11 @@
       </a>
     </b-upload>
     <span class="file-name" v-if="file">{{ file.name }}</span>
-    <span>
-      <b-button @click="send">SEND</b-button>
-    </span>
   </b-field>
+  <span>
+    <b-button @click="send">SEND</b-button>
+  </span>
+  </div>
 </template>
 
 <script>

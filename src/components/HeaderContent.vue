@@ -28,7 +28,7 @@ p {
 }
 
 .header {
-  margin-top: 5rem;
+  padding-top: 5rem;
   text-align: center;
   color: white;
 }

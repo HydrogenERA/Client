@@ -2,10 +2,9 @@
   <div>
     <HeaderContent v-bind:header="header" v-bind:contents="contents"></HeaderContent>
 
-    <InputContent></InputContent>
+    <ImageUpload @getImages="getImages"></ImageUpload>
     <sharePic :resultURL="resultURL"></sharePic>
     <ImageCard></ImageCard>
-    <ImageUpload @getImages="getImages"></ImageUpload>
   </div>
 </template>
 
@@ -56,4 +55,7 @@ export default {
 </script>
 
 <style scoped>
+* {
+  background-color: black;
+}
 </style>
