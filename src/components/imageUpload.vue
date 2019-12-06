@@ -1,16 +1,16 @@
 <template>
-  <div>
-  <b-field class="file">
+  <div style="text-align: center;">
+  <b-field   class="file">
     <b-upload v-model="file">
-      <a class="button is-primary">
-        <b-icon icon="upload"></b-icon>
-        <span style="color: wh">Click to upload</span>
+      <a style="margin-left: 550; margin-top: 40%;" class="button is-primary">
+        <b-icon  icon="upload"></b-icon>
+        <span style="color: white">Click to upload</span>
       </a>
     </b-upload>
     <span class="file-name" v-if="file">{{ file.name }}</span>
   </b-field>
   <span>
-    <b-button @click="send">SEND</b-button>
+    <b-button style="color : white ;background-color: #3E4E6C; border: none; margin-bottom: 30px;" @click="send">SEND</b-button>
   </span>
   </div>
 </template>
@@ -47,4 +47,8 @@ export default {
 </script>
 
 <style scoped>
+a {
+  margin-top: 1rem;
+  margin-left: 760%;
+}
 </style>

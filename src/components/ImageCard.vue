@@ -1,13 +1,15 @@
 <template>
-  <div class="container">
+  <div class="container" >
     <div class="row justify-content-md-center">
       <div v-for="(image,i) in imageList" :key="i" class="col-sm-4">
+        <!-- {{image}} -->
         <ImageItem
           :imageUrl="image.url"
         >
         </ImageItem>
-        <sharePic :imageId="image.url"></sharePic>
-        <facebookShare></facebookShare>
+        <!-- <sharePic :imageId="image.url"></sharePic> -->
+        <facebookShare
+          :imageLink="image.url"></facebookShare>
       </div>
     </div>
   </div>
@@ -21,19 +23,20 @@ import facebookShare from '../components/facebookShare'
 export default {
   data: function () {
     return {
-      imageList: [
-        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
-        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
-        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
-        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
-        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
-        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'}
-      ]
+      // imageList: [
+      //   {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
+      //   {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
+      //   {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
+      //   {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
+      //   {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
+      //   {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'}
+      // ]
     }
   },
+  props: ['imageList'],
   components: {
     ImageItem,
-    sharePic,
+    // sharePic,
     facebookShare
   }
 }

@@ -2,10 +2,10 @@
   <div>
     <HeaderContent v-bind:header="header" v-bind:contents="contents"></HeaderContent>
 
-    <InputContent></InputContent>
+    <!-- <InputContent></InputContent> -->
     <div id="fb-root"></div>
     <ImageUpload @getImages="getImages"></ImageUpload>
-    <ImageCard></ImageCard>
+    <ImageCard :imageList="images"></ImageCard>
   </div>
 </template>
 
@@ -31,27 +31,30 @@ export default {
       image: "",
       header: "HydrogenERA",
       contents: [
-        "Create and share beautiful images of your source code.",
+        "Upload and share beautiful images of your pin board.",
         "Start typing or drop a file into the text area to get started."
       ],
       images: [],
-      resultURL : ''
+      // resultURL : ''
     };
   },
   methods : {
-    getImages(url) {
+    getImages() {
       axios.get('/images')
         .then(({data}) => {
-          console.log(data);
+          console.log(data, "ini dr get images");
           this.images = data
-          this.resultURL = url
+          // this.resultURL = url
         })
         .catch(console.log)
-    },
+    }
+  
+  },
     created() {
       this.getImages()
+      console.log("harusnya ada");
+      
     }
-  }
 };
 </script>
 

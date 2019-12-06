@@ -1,8 +1,9 @@
 <template>
   <div class="header">
     <h1>{{ header }}</h1>
+    <br>
     <div>
-      <p v-for="content in contents">
+      <p v-for="(content, i) in contents" :key=i>
         {{ content }}
       </p>
     </div>
