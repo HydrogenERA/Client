@@ -4,9 +4,7 @@
 
     <InputContent></InputContent>
     <div id="fb-root"></div>
-    <sharePic :imageId="image"></sharePic>
     <ImageUpload @getImages="getImages"></ImageUpload>
-    <sharePic :resultURL="resultURL"></sharePic>
     <ImageCard></ImageCard>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row justify-content-md-center">
-      <div v-for="image in imageList" class="col-sm-4">
+      <div v-for="(image,i) in imageList" :key="i" class="col-sm-4">
         <ImageItem
           :imageUrl="image.url"
         >
@@ -16,7 +16,7 @@
 <script>
 import ImageItem from './ImageItem.vue'
 import sharePic from './sharePic.vue'
-import facebookSearch from '../components/facebookShare'
+import facebookShare from '../components/facebookShare'
 
 export default {
   data: function () {
@@ -34,11 +34,25 @@ export default {
   components: {
     ImageItem,
     sharePic,
-    facebookSearch
+    facebookShare
   }
 }
 </script>
 
 <style scoped>
+.card {
+  color: white;
+  width: 18rem;
+  margin: 0 auto;
+}
 
+/* .container {
+  width: 50rem;
+  margin: 0 auto;
+  width: 20rem;
+} */
+
+img {
+  width: 100%;
+}
 </style>

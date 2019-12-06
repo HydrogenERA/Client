@@ -9,7 +9,7 @@
 
                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
                 <div class="addthis_inline_share_toolbox" :data-url="getSharePic" data-title="WATER" ></div>
-
+            
   </div>
 </template>
 
@@ -29,12 +29,6 @@ export default {
         media: "THE IMAGE"
       };
     }
-  },
-  computed: {
-    // getSharePic() {
-      // return `https://twitter.com/intent/tweet?text=check this out!?q=${this.resultURL}`;
-    //   return this.resultURL
-    // }
   }
 };
 </script>

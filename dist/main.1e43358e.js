@@ -8921,11 +8921,6 @@ var _default = {
         media: "THE IMAGE"
       };
     }
-  },
-  computed: {// getSharePic() {
-    // return `https://twitter.com/intent/tweet?text=check this out!?q=${this.resultURL}`;
-    //   return this.resultURL
-    // }
   }
 };
 exports.default = _default;
@@ -9333,7 +9328,7 @@ var _default = {
   components: {
     ImageItem: _ImageItem.default,
     sharePic: _sharePic.default,
-    facebookSearch: _facebookShare.default
+    facebookShare: _facebookShare.default
   }
 };
 exports.default = _default;
@@ -9353,10 +9348,10 @@ exports.default = _default;
     _c(
       "div",
       { staticClass: "row justify-content-md-center" },
-      _vm._l(_vm.imageList, function(image) {
+      _vm._l(_vm.imageList, function(image, i) {
         return _c(
           "div",
-          { staticClass: "col-sm-4" },
+          { key: i, staticClass: "col-sm-4" },
           [
             _c("ImageItem", { attrs: { imageUrl: image.url } }),
             _vm._v(" "),
@@ -11316,8 +11311,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
 var _default = {
   name: "App",
   components: {
@@ -11376,11 +11369,7 @@ exports.default = _default;
       _vm._v(" "),
       _c("div", { attrs: { id: "fb-root" } }),
       _vm._v(" "),
-      _c("sharePic", { attrs: { imageId: _vm.image } }),
-      _vm._v(" "),
       _c("ImageUpload", { on: { getImages: _vm.getImages } }),
-      _vm._v(" "),
-      _c("sharePic", { attrs: { resultURL: _vm.resultURL } }),
       _vm._v(" "),
       _c("ImageCard")
     ],
@@ -28202,7 +28191,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38909" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34253" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
