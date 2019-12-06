@@ -3,6 +3,7 @@
     <HeaderContent v-bind:header="header" v-bind:contents="contents"></HeaderContent>
 
     <InputContent></InputContent>
+    <div id="fb-root"></div>
     <sharePic :imageId="image"></sharePic>
   </div>
 </template>

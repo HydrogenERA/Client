@@ -8906,8 +8906,18 @@ var _default = {
   name: "sharePic",
   data: function data() {
     return {
-      shareLink: "https://twitter.com/intent/tweet?text=".concat(imageId)
+      shareLink: "https://twitter.com/intent/tweet?text=".concat(this.imageId)
     };
+  },
+  methods: {
+    share: function share() {
+      var addthis_share = {
+        url: "https://twitter.com/",
+        title: "THE TITLE",
+        description: "THE DESCRIPTION",
+        media: "THE IMAGE"
+      };
+    }
   },
   props: ['imageId']
 };
@@ -9153,6 +9163,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 var _default = {
   name: "App",
   components: {
@@ -9189,6 +9200,8 @@ exports.default = _default;
       }),
       _vm._v(" "),
       _c("InputContent"),
+      _vm._v(" "),
+      _c("div", { attrs: { id: "fb-root" } }),
       _vm._v(" "),
       _c("sharePic", { attrs: { imageId: _vm.image } })
     ],
@@ -9270,7 +9283,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34939" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38865" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
