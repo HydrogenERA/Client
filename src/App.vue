@@ -3,7 +3,6 @@
     <HeaderContent v-bind:header="header" v-bind:contents="contents"></HeaderContent>
 
     <InputContent></InputContent>
-    <sharePic :imageId="image"></sharePic>
     <ImageCard></ImageCard>
   </div>
 </template>
