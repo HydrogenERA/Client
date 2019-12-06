@@ -1,7 +1,7 @@
 <template>
   <div>
     <a
-      :href="shareLink"
+      :href="baseUrl"
       class="twitter-share-button"
       data-size="large"
       data-show-count="false"
@@ -14,10 +14,10 @@ export default {
   name: "sharePic",
   data() {
     return {
-        shareLink:`https://twitter.com/intent/tweet?text=`
+        baseUrl:`https://twitter.com/intent/tweet?text=`
     };
   },
-  props:['imageId'],
+  props:['imageId']
 };
 </script>
 

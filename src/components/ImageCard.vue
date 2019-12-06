@@ -20,12 +20,12 @@ export default {
   data: function () {
     return {
       imageList: [
-        {url: '../images/thumbnail1.png'},
-        {url: '../images/thumbnail2.png'},
-        {url: '../images/thumbnail3.png'},
-        {url: '../images/thumbnail4.png'},
-        {url: '../images/thumbnail5.png'},
-        {url: '../images/thumbnail6.png'}
+        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
+        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
+        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
+        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
+        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'},
+        {url: 'https://storage.googleapis.com/hydrogen-images/1575606969591-36396557-tumblr-wallpaper.jpg'}
       ]
     }
   },
